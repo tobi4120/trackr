@@ -1,0 +1,31 @@
+{% extends 'final/layout.html' %}
+{% load static %}
+
+{% block body %}
+    <div id="nav-bar-bar">
+        <ul id="nav-bar">
+            <div className="logo-user">
+                <li><img class="logo" src="{% static 'final/LogoMakr-1Oa3f1.png' %}" alt="Logo"></li>
+            </div>
+        </ul>
+    </div>
+
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+        <div{% if message.tags %} class="flash alert alert-danger"{% endif %}>{{ message }}</div>
+        {% endfor %}
+    <div>
+    {% endif %}
+
+    <h1 class="title log-in-header">Log In</h1>
+    <div class="login-container">
+        <form class="login" method="post">
+            {% csrf_token %}
+            <input autocomplete="off" type="text" name='username' placeholder="Username" required><br>
+            <input autocomplete="off" type="password" name='password' placeholder="Password" required><br>
+            <input class="button-primary login-button" type="submit" value="Log In">
+        </form>
+    </div>
+    <p class="dont_have_an_account">Don't have an account?<a class="link-to-register" href="/register">Register</a></p>
+{% endblock %}

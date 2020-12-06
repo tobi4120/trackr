@@ -1,0 +1,13 @@
+{% extends 'final/layout.html' %}
+
+{% block script %}
+    {% load static %}
+    <script src="{% static 'final/index.js' %}" type="text/babel"></script>
+{% endblock %}
+
+{% block body %}
+    <div id='all_projects'></div>
+    <input id="file_name" type="hidden" value="{{ file_name }}">
+    <input id="csrf_token" type="hidden" value="{{ csrf_token }}">
+    <input id="current_user" type="hidden" value="{{ current_user }}">
+{% endblock %}
