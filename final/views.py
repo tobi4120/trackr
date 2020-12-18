@@ -56,7 +56,8 @@ class BoardViewSet(viewsets.ModelViewSet):
 @login_required(login_url='/login')
 def index(request):
 
-    # Get current date
+    # Get current date 
+    """
     current_date = datetime.datetime.now()
 
     current_date_formatted = current_date.strftime("%b-%d-%Y")
@@ -113,10 +114,11 @@ def index(request):
         row += 1
 
     report.close()
+    """
 
     return render(request, 'final/index.html', {
         "current_user": request.user,
-        "file_name": "static/report_{}_{}.xlsx".format(request.user.username, current_date_formatted)
+        #"file_name": "static/report_{}_{}.xlsx".format(request.user.username, current_date_formatted)
     })
 
 def register(request):

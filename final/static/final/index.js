@@ -1778,7 +1778,6 @@ class Navbar extends React.Component {
                         <li className="signed_in_as">Signed in as <p className="nav-username" style={{"fontWeight": "bold"}}>{this.props.current_user}</p></li>
                     </div>
                     <div id="notifcation-nav"></div>
-                    <li><a className="download_report" href={this.props.file_name} download>Download Report</a></li>
                     <li>
                         <Notifications add_requests={this.props.add_requests} 
                                     current_user={this.props.current_user} 
