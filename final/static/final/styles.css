@@ -1199,6 +1199,10 @@ hr {
     background-color: #8a0ee3;
 }
 
+.purple:hover {
+    background-color: #5e089c;
+}
+
 .purple_2 {
     color: #8a0ee3;
     border-color: #8a0ee3;
