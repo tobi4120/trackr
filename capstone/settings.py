@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '$tiv^5k$23=log1ulq8tpd1qq(cd8!16-+^qr&g*7h_o$uw4j9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['track-r.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
